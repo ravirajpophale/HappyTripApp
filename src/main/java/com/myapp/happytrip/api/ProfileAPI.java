@@ -32,7 +32,7 @@ public class ProfileAPI extends ProfileDetails{
 			try {
 				Integer phoneNumber = PhoneNumber ;
 				System.out.println(fullName + gender + dateOfBirth + address + city + state + country + pincode + phoneNumber + emailId);
-				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Registration","root","Abdul143@");
+				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Registration","root","root");
 				String query = "INSERT INTO userprofiledetails(FULL_NAME, GENDER ,DATE_OF_BIRTH, ADDRESS, CITY, STATE, COUNTRY, PINCODE, MOBILE_NUMBER, EMAIL_ID) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ? );";
 				PreparedStatement myInsert = con.prepareStatement(query);
 				myInsert.setString(1, fullName);

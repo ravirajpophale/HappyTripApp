@@ -31,7 +31,7 @@ public class RegistrationAPI extends UserRegistrationAPI {
 		try {
 			String emailId= Email ;
 			System.out.println(fullName + emailId + password + dateOfBirth + gender);
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registration","root","Abdul143@");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registration","root","root");
 			String query = "INSERT INTO userregistrationdetails(FULL_NAME, EMAIL, PASSWORD,DATE_OF_BIRTH, GENDER,) VALUES(?, ?, ?, ?, ?);";
 			PreparedStatement myInsert = con.prepareStatement(query);
 			myInsert.setString(1, fullName);
